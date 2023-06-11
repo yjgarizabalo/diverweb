@@ -1,4 +1,8 @@
-# Astro Starter Kit: Minimal
+# diverweb 🚀
+
+>"Cada proyecto comienza con una idea. _No tengas miedo de perseguir la tuya y convertirla en realidad._ **¡El mundo te espera!" 🌎**
+
+## Astro Starter Kit: Minimal
 
 ```
 npm create astro@latest -- --template minimal
