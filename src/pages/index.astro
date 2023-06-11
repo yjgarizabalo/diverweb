@@ -1,4 +1,8 @@
 ---
+	// Navegation
+	import Navegation from '../components/Navegation.astro';
+	import '../styles/global.css';
+	const pageTitle = "diverweb"
 ---
 
 <html lang="es">
@@ -7,10 +11,10 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>diverweb</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>diverweb</h1>
-		<a href="http://localhost:3000/nosotros">Nosotros</a>
+		<Navegation />
+		<h1>{pageTitle}</h1>
 	</body>
 </html>
