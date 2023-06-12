@@ -1,19 +1,14 @@
 ---
-title: 'Mi primer post en el blog'
-pubDate: 2022-07-01
-description: 'Este es el primer post de mi nuevo blog Astro.'
-author: 'Astro alumno'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'Blog diverweb inicando tu proyecto!🚀'
+description: '¡Bienvenidos a una nueva experenica para crear y diseñar tu web!'
+author: 'YairG'
 image:
-    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
+    url: 'https://astro.build/_astro/astro-cloudcannon-hero.a8b076df.webp' 
     alt: 'El logotipo de Astro con la palabra One.'
+pubDate: 2022-06-10
 tags: ["astro", "bloguear", "aprender en público"]
 ---
-
-# Blog diverweb inicando tu proyecto!🚀
-
-publicado: 2022-06-10
-
-¡Bienvenidos a una nueva experenica para crear y diseñar tu web!
 
 ## Lo que conseguido
 

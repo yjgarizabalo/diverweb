@@ -1,36 +1,21 @@
-<!DOCTYPE html>
-<html lang="es">
+---
+	import BaseLayout from "../layouts/BaseLayout.astro";
+	const allPost = await Astro.glob('../pages/posts/*.md');
+	const pageTitle = "Blog"
+---
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="generator" content={Astro.generator} />
-	<title>Blog</title>
+  <meta charset="utf-8" />
+	<title>{pageTitle}</title>
 </head>
 
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="/">Inicio</a></li>
-				<li><a href="/nosotros">Nosotos</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<h1>Blog</h1>
-			<h2>Post diverweb</h2>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, neque?</p>
-			<ul>
-				<li><a href="/posts/post-1">Post 1</a></li>
-				<li><a href="/posts/post-2">Post 2</a></li>
-				<li><a href="/posts/post-3">Post 3</a></li>
-			</ul>
-		</section>
-	</main>
-</body>
-
-</html>
+<BaseLayout pageLayout={pageTitle}>
+	<section>
+		<h1>{pageTitle}</h1>
+		<h2>Post diverweb</h2>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, neque?</p>
+		<ul>
+		 {allPost.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+		</ul>
+	</section>
+</BaseLayout>

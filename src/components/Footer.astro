@@ -1,0 +1,21 @@
+---
+  const platform = "github";
+  const username = "yjgarizabalo"
+  // redes sociales
+  import Social from "./Social.astro"
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  <p>No se dejen engañar, vuelen alto siempre con su ideas y proyectos <a target="_blank" href={`https://www.${platform}.com/${username}`}>{platform}</a> </p>
+
+  <Social platform="twitter" username="YairG77" />
+  <Social platform="github" username="yjgarizabalo" />
+</footer>

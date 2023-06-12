@@ -1,7 +1,5 @@
 ---
-	import Navegation from '../components/Navegation.astro';
-	import '../styles/global.css'
-
+	import BaseLayout from "../layouts/BaseLayout.astro";
 	const pageTitle = "Sobre nosotros"
 
 	const identity = {
@@ -22,14 +20,8 @@
 	const textCase = "uppercase";
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="generator" content={Astro.generator} />
+	<meta charset="utf-8" />
 	<title>{pageTitle}</title>
 
 	<!-- css -->
@@ -47,33 +39,27 @@
 	</style>
 </head>
 
-<body>
-	<Navegation />
-	<main>
-		<section>
-			<h1>{pageTitle}</h1>
-			<p>He aquí algunos datos sobre mí:</p>
-			<ul>
-				<li>Me llamo {identity.firstName}.</li>
-				<li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-				{identity.hobbies.length >= 2 &&
-				<li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
-				}
-			</ul>
-			<p>Mis habilidades son:</p>
-			<ul>
-				{skills.map((skill) => <li>{skill}</li>)}
-			</ul>
-		</section>
-		<section>
-			{happy && <p>¡Estoy feliz de aprender Astro!</p>}
+<BaseLayout>
+	<h1>{pageTitle}</h1>
+	<section>
+		<p>He aquí algunos datos sobre mí:</p>
+		<ul>
+			<li>Me llamo {identity.firstName}.</li>
+			<li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+			{identity.hobbies.length >= 2 &&
+			<li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+			}
+		</ul>
+		<p>Mis habilidades son:</p>
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+	</section>
+	<section>
+		{happy && <p>¡Estoy feliz de aprender Astro!</p>}
 
-			{finished && <p>¡He terminado este tutorial!</p>}
+		{finished && <p>¡He terminado este tutorial!</p>}
 
-			{goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
-		</section>
-	</main>
-	<footer></footer>
-</body>
-
-</html>
+		{goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+	</section>
+</BaseLayout>
