@@ -1,5 +1,6 @@
 ---
 	import BaseLayout from "../layouts/BaseLayout.astro";
+	import BlogPost from "../components/BlogPost.astro";
 	const allPost = await Astro.glob('../pages/posts/*.md');
 	const pageTitle = "Blog"
 ---
@@ -15,7 +16,7 @@
 		<h2>Post diverweb</h2>
 		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, neque?</p>
 		<ul>
-		 {allPost.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+		 {allPost.map((post) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
 		</ul>
 	</section>
 </BaseLayout>

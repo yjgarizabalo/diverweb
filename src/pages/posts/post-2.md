@@ -7,9 +7,5 @@ image:
     url: "https://astro.build/_astro/blog-hero-astro-2_6.145cbcdc.webp"
     alt: "Miniaturas de páginas web del sitio Astro Showcase."
 pubDate: 2022-07-08
-tags: ["astro", "bloguear", "aprender en público","éxitos"]
+tags: ["astros", "éxitos", "aprender en público","éxitos"]
 ---
-
-
-
-[astros](astro), [blogueat](blogueat), [aprender en público éxitos]()

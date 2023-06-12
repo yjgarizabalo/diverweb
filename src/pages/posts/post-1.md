@@ -7,7 +7,7 @@ image:
     url: 'https://astro.build/_astro/astro-cloudcannon-hero.a8b076df.webp' 
     alt: 'El logotipo de Astro con la palabra One.'
 pubDate: 2022-06-10
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["astros ", "bloguear ", "aprender en público"]
 ---
 
 ## Lo que conseguido

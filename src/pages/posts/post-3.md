@@ -10,4 +10,4 @@ pubDate: 2022-07-15
 tags: ["astro", "aprender en público", "contratiempos", "comunidad"]
 ---
 
-[astros](astro), [contratiempos](contratiempos), [aprender en público éxitos](), [comunidad](comunidad)
+Es es tercer post para que hablas de 3 cosas o mas si quieres.
