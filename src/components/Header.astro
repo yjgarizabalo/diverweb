@@ -2,12 +2,22 @@
   import Hamburguer from "./Hamburger.astro";
   import Navegation from "./Navegation.astro";
   import ThemeIncon from "./ThemeIncon.astro";
+  import Logo from "../assets/logo.svg"
+  import LogoDiverweb from "../assets/diverweb-ligth.svg"
 ---
 
-<header>
-  <nav>
-    <Hamburguer />
-    <ThemeIncon />
+<header class="header">
+  <div class="header__container">
+
+    <img loading="lazy" src={Logo} class="header__img" width="40" height="40" alt="logo diveweb" title="diverweb Deserrollo web">
+
     <Navegation />
+
+    <a href="#" title="Diseño Web Barranquilla"><img loading="lazy" class="header__logo" src={LogoDiverweb} alt="Diseño Web Barranquilla" width="150"></a>
+  </div>
+  <nav>
+    <!-- <Hamburguer /> -->
+    <!-- <ThemeIncon /> -->
+    <!-- <Navegation /> -->
   </nav>
 </header>
