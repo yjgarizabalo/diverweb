@@ -1,15 +1,37 @@
 ---
 	import BaseLayout from "../layouts/BaseLayout.astro";
 	import HeroDiverwebMobil from "../assets/hero-diverweb-mobil.png"
-	import Source from "../assets/calendar.svg"
+	import HeroDiverwebDesktop from "../assets/hero-diverweb-desktop.png"
+	// brand
+	import Steam from "../assets/steam.svg"
+	import Unity from "../assets/unity.svg"
+	import Heroku from "../assets/heroku.svg"
+	import Aws from "../assets/aws.svg"
 	const pageTitle = "diverweb"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<section class="main__grid">
 		<picture class="main__picture">
-			<source srcset={Source} class="main__img" media="(min-width:768px)">
+			<source srcset={HeroDiverwebDesktop} class="main__img" media="(min-width:768px)">
+
 			<img src={HeroDiverwebMobil} alt="hero diverweb mobil" class="main__img">
 		</picture>
+
+		<article class="main__article">
+			<div class="main__texts">
+				<h1 class="main__titel">Diverweb</h1>
+				<p class="main__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quaerat vitae?</p>
+
+				<a href="#" class="main__cta">Saber de esto</a>
+			</div>
+
+			<div class="main__brands">
+				<img src={Steam} class="main__brand" alt="Marca">
+				<img src={Unity} class="main__brand" alt="Marca">
+				<img src={Heroku} class="main__brand" alt="Marca">
+				<img src={Aws} class="main__brand" alt="Marca">
+			</div>
+		</article>
 	</section>
 </BaseLayout>
